@@ -1,9 +1,15 @@
-function TocaSomPom() {
+function tocaSomPom() {
   document.querySelector("#som_tecla_pom").play();
 }
 
-document.querySelector(".tecla_pom").onclick = TocaSomPom;
+const listaDeTeclas = document.querySelectorAll(".tecla");
 
-function tocaSomClap() {
-  document.querySelector("#som_tecla_clap").play();
+let contador = 0;
+
+while (contador < listaDeTeclas.length) {
+  listaDeTeclas[contador].onclick = tocaSomPom;
+
+  contador = contador + 1;
+
+  console.log(contador);
 }
